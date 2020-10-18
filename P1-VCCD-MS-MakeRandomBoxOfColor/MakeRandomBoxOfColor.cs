@@ -35,7 +35,7 @@ namespace P1_VCCD_MS_MakeRandomBoxOfColor
                //generate and set ARGB value 
                if (x <= 100)
                {
-                  int a = textBox1.Text;
+                  int a = 250;
                   int r = 255;
                   int g = 0;
                   int b = 0;
@@ -86,41 +86,6 @@ namespace P1_VCCD_MS_MakeRandomBoxOfColor
       private void pictureBox1_Click(object sender, EventArgs e)
       {
 
-      }
-
-      private void label20_Click(object sender, EventArgs e)
-      {
-
-      }
-
-      private void label19_Click(object sender, EventArgs e)
-      {
-
-      }
-
-      private void label18_Click(object sender, EventArgs e)
-      {
-
-      }
-
-      private void label17_Click(object sender, EventArgs e)
-      {
-
-      }
-
-      private void textBox1_TextChanged(object sender, EventArgs e)
-      {
-         if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-        (e.KeyChar != '.'))
-         {
-            e.Handled = true;
-         }
-
-         // only allow one decimal point
-         if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-         {
-            e.Handled = true;
-         }
       }
    }
 }

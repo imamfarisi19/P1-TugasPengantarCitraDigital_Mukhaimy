@@ -60,6 +60,7 @@ namespace P1_VCCD_MS_Half_Grayscale_invert
                }
             }
             pictureBox2.Image = newBitmap;
+            newBitmap.Save("C:\\Users\\USER\\Downloads\\Hasil\\Hasil Half Grayscale and Invert");
          }
          else
          {
@@ -76,5 +77,10 @@ namespace P1_VCCD_MS_Half_Grayscale_invert
       {
 
       }
-   }
+
+        private void HalfGrayscaleInvert_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

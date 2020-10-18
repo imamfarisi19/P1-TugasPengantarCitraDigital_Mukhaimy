@@ -121,6 +121,7 @@
          this.Name = "HalfGrayscaleInvert";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Convert Original Image to Half Grayscale and Invert";
+         this.Load += new System.EventHandler(this.HalfGrayscaleInvert_Load);
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
          ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
          this.ResumeLayout(false);
