@@ -16,9 +16,11 @@ namespace P1_VCCD_MS_Half_Grayscale_invert
       {
          InitializeComponent();
       }
+
       Bitmap newBitmap;
       Image file;
       Boolean opened = false;
+
       private void button1_Click(object sender, EventArgs e)
       {
          DialogResult dr = openFileDialog1.ShowDialog();
@@ -36,29 +38,8 @@ namespace P1_VCCD_MS_Half_Grayscale_invert
       {
          if (opened == true)
          {
-            for (int x = 0; x < newBitmap.Width; x++)
-            {
-               for (int y = 0; y < newBitmap.Height; y++)
-               {
-                  if (x <= (newBitmap.Width / 2))
-                  {
-                     //change to Grayscale color
-                     Color originalColor = newBitmap.GetPixel(x, y);
-                     int grayScale = (int)((originalColor.R * .3) + (originalColor.G * .59) + (originalColor.B * .11));
-                     Color newColor = Color.FromArgb(grayScale, grayScale, grayScale);
-                     newBitmap.SetPixel(x, y, newColor);
-                  }
-                  else if (x >= (newBitmap.Width / 2))
-                  {
-                     //change to invert color
-                     Color pixel = newBitmap.GetPixel(x, y);
-                     int red = pixel.R;
-                     int green = pixel.G;
-                     int blue = pixel.B;
-                     newBitmap.SetPixel(x, y, Color.FromArgb(255 - red, 255 - green, 255 - blue));
-                  }
-               }
-            }
+            OlahCitra oc = new OlahCitra();
+            oc.olahgambar();
             pictureBox2.Image = newBitmap;
             newBitmap.Save("C:\\Users\\USER\\Downloads\\Hasil\\Hasil Half Grayscale and Invert.png");
          }

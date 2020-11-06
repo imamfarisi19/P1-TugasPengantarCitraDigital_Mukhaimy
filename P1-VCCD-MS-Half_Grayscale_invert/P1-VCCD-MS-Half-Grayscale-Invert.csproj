@@ -52,6 +52,7 @@
     <Compile Include="HalfGrayscaleInvert.Designer.cs">
       <DependentUpon>HalfGrayscaleInvert.cs</DependentUpon>
     </Compile>
+    <Compile Include="OlahCitra.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="HalfGrayscaleInvert.resx">
